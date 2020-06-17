@@ -93,8 +93,8 @@ You can also get _all_ of the elements matching a selector with [`document.query
 
 You can modify the content of a node with:
 
-- [`.innerText()`](https://www.w3schools.com/jsref/prop_node_innertext.asp)
-- [`.innerHTML()`](https://www.w3schools.com/jsref/prop_html_innerhtml.asp)
+- [`.innerText`](https://www.w3schools.com/jsref/prop_node_innertext.asp)
+- [`.innerHTML`](https://www.w3schools.com/jsref/prop_html_innerhtml.asp)
 
 ---
 
@@ -105,7 +105,14 @@ You can modify the content of a node with:
 ```
 
 ```js
-// Example
+const title = document.querySelector('#title');
+title.innerText = 'The newer title';
+
+//or
+
+title.innerHTML = 'the <span>newer</span> title';
+
+//inner HTML lets you add html, where as innertext only lets you add text.
 ```
 
 ---
@@ -126,7 +133,13 @@ To add a new node to an HTML page, you need to do it in 3 steps.
 - [`node.appendChild()`](https://www.w3schools.com/jsref/met_node_appendchild.asp)
 
 ```js
-// Example
+<div class="container"></div>
+
+const container = document.querySelector('container');
+
+const title = document.creatElement('h1');
+title.innerText = 'My title';
+container.appendChild(title);
 ```
 
 ---
